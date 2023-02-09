@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 
 const BlogSlide = ({ item, revClass }) => {
   return (
@@ -9,9 +10,12 @@ const BlogSlide = ({ item, revClass }) => {
       <div className={" flex flex-col justify-between px-12  "}>
         <h1 className="text-4xl font-bold">{item.title}</h1>
         <p>{item.desc}</p>
-        <button className="px-4 py-2 border w-28 text-teal-500 hover:bg-teal-600 hover:text-white">
+        <Link
+          className="px-4 py-2 border w-28 text-teal-500 hover:bg-teal-600 hover:text-white"
+          to={"/post/2"}
+        >
           Read More
-        </button>
+        </Link>
       </div>
       <div className=" relative basis-3/6">
         <img className="w-full h-[280px] object-cover" src={item.img} alt="" />

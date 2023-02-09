@@ -4,7 +4,7 @@ import WriteMenu from "../components/WriteMenu";
 
 const Write = () => {
   return (
-    <div className="max-w-5xl mx-auto">
+    <div className="max-w-5xl mx-auto mb-12">
       <input
         className="border-2 border-gray-400 rounded-sm "
         type="text"
@@ -14,7 +14,7 @@ const Write = () => {
       <label className="sr-only" htmlFor="title">
         Title
       </label>
-      <div className="flex justify-between h-[300px]">
+      <div className="flex justify-between">
         <WriteBlog />
         <WriteMenu />
       </div>

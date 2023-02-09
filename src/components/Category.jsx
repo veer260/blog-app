@@ -9,7 +9,8 @@ const Category = () => {
         <label htmlFor="art">Art</label>
       </div>
       <div className="flex items-center">
-        <input type="radio" value="" id="science" />
+        <input 
+         type="radio" value="" id="science" />
         <label htmlFor="science">Science</label>
       </div>
       <div className="flex items-center">

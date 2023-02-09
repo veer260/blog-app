@@ -14,7 +14,7 @@ const Publish = () => {
       </div>
       <div className="my-2">
         <input className="hidden" type="file" id="file" />
-        <label className="underline text-sm" htmlFor="file">
+        <label className="underline cursor-pointer text-sm" htmlFor="file">
           Select image
         </label>
       </div>
