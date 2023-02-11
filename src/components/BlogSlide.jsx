@@ -9,9 +9,9 @@ const BlogSlide = ({ item, revClass }) => {
     >
       <div className={" flex flex-col justify-between px-12  "}>
         <h1 className="text-4xl font-bold">{item.title}</h1>
-        <p>{item.desc}</p>
+        <p className="text-gray-500">{item.desc}</p>
         <Link
-          className="px-4 py-2 border w-28 text-teal-500 hover:bg-teal-600 hover:text-white"
+          className="px-4 py-2 border-2 border-teal-500 w-28 text-teal-500 hover:bg-teal-600 hover:text-white"
           to={"/post/2"}
         >
           Read More

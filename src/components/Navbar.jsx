@@ -1,9 +1,15 @@
-import React from "react";
+import React, { useContext } from "react";
 import { Link } from "react-router-dom";
+import { userContext } from "./Contexts";
 
 const Navbar = () => {
+  const { logout } = useContext(userContext);
+  const handleClick = (e) => {
+    console.log("handleClick called");
+    logout();
+  };
   return (
-    <div className="flex justify-between items-center max-w-5xl mx-auto">
+    <div className="flex justify-between mb-12 items-center max-w-5xl mx-auto">
       <div className=" flex-grow">
         <Link to="/">
           <img
@@ -45,7 +51,11 @@ const Navbar = () => {
           </Link>
         </div>
         <span>John</span>
-        <span>Logout</span>
+        <span>
+          <Link onClick={handleClick} to={"/login"}>
+            Logout
+          </Link>
+        </span>
       </div>
       <span className="bg-teal-200 hover:bg-white hover:border-2 border-teal-500 rounded-full flex w-10 h-10 justify-center items-center">
         <Link className="" to="/write">

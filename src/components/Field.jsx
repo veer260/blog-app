@@ -1,6 +1,6 @@
 import React from "react";
 
-const Field = ({ placeholder, label, id, type }) => {
+const Field = ({ placeholder, label, id, type, name, onChange, value }) => {
   return (
     <div className="w-full">
       <input
@@ -8,6 +8,9 @@ const Field = ({ placeholder, label, id, type }) => {
         type={type}
         placeholder={placeholder}
         id={id}
+        name={name}
+        onChange={onChange}
+        value={value}
       />
       <label className="sr-only" htmlFor="username">
         {label}
