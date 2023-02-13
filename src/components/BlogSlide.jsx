@@ -12,7 +12,7 @@ const BlogSlide = ({ item, revClass }) => {
         <p className="text-gray-500">{item.desc}</p>
         <Link
           className="px-4 py-2 border-2 border-teal-500 w-28 text-teal-500 hover:bg-teal-600 hover:text-white"
-          to={"/post/2"}
+          to={"/post/" + item.id}
         >
           Read More
         </Link>

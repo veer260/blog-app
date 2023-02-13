@@ -14,7 +14,9 @@ const UserContext = ({ children }) => {
         "http://localhost:3006/api/auth/login",
         inputs
       );
-      setUser(response.data.data);
+      const { token, ...other } = response.data.data;
+      setUser(other);
+      localStorage.setItem("access_token", JSON.stringify(token));
     } catch (error) {
       console.log("error:", error);
       throw error;
@@ -26,6 +28,7 @@ const UserContext = ({ children }) => {
       //   console.log("logout called");
       await axios.post("http://localhost:3006/api/auth/logout");
       setUser(null);
+      localStorage.setItem("access_token", "");
     } catch (error) {
       console.log("error:", error);
       throw error;
